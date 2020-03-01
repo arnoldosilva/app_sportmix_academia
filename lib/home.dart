@@ -20,39 +20,78 @@ class _HomeState extends State<Home> {
   ];
 
 
-  void _onItemTapped(int index){
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+        title: Text('WorkOut Pro'),
+        actions: <Widget>[
+          IconButton(
+            tooltip: 'Loja',
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () {}),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {}),
+        ],
+      ),
+
       body: Center(
         child: telas[_selectedIndex],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,        
-        items: [
-        BottomNavigationBarItem(
+      floatingActionButton: FloatingActionButton(
+        
+        elevation: 20,
+        child: Image.asset('imagens/deadlift.png'),
+        onPressed: (){}),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+        IconButton(
+          iconSize: 50,
           icon: Icon(Icons.account_circle),
-          title: Text('Conta'),
+          onPressed: (){
+            setState(() {
+              _selectedIndex = 0;
+            });
+          },
         ),
-        BottomNavigationBarItem(
+        IconButton(
+          iconSize: 50,
           icon: Icon(Icons.description),
-          title: Text('Treino'),
+            onPressed: (){
+              setState(() {
+              _selectedIndex = 1;
+            });
+            },
         ),
-        BottomNavigationBarItem(
+        
+        IconButton(
+          iconSize: 50,
           icon: Icon(Icons.donut_small),
-          title: Text('Macros'),
+            onPressed: (){
+              setState(() {
+              _selectedIndex = 2;
+            });
+            },
         ),
-        BottomNavigationBarItem(
+        IconButton(          
+          iconSize: 50,
           icon: Icon(Icons.playlist_play),
-          title: Text('PlayLista'),
+            onPressed: (){
+              setState(() {
+              _selectedIndex = 3;
+            });
+            },
+        )
+          ],
         ),
-      ]),
+           
+      ), 
     );
   }
 }
