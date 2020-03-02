@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:academia_sport_mix/telas/subtelas/carousel_slider.dart';
+import 'package:academia_sport_mix/telas/subtelashome/carousel_slider.dart';
 
 class Conta extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class _ContaState extends State<Conta> {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 5),
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2,
                 decoration: BoxDecoration(
@@ -81,7 +81,7 @@ class _ContaState extends State<Conta> {
                       ),
                       //NOME
                       Padding(
-                        padding: EdgeInsets.only(top: 10, bottom: 32),
+                        padding: EdgeInsets.only(top: 10, bottom: 15),
                         child: Text(
                           'Arnoldo Silva'.toUpperCase(),
                           style: TextStyle(
@@ -91,7 +91,7 @@ class _ContaState extends State<Conta> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 16, right: 16),
+                        padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
@@ -144,7 +144,7 @@ class _ContaState extends State<Conta> {
               ),
               Container(
                 padding: EdgeInsets.only(top:20),
-                child: contacSlider                                
+                child: resumoSlider                                
               )
             ],
           ),

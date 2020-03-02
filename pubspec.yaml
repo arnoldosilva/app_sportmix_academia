@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   carousel_slider: ^1.4.1
+  flutter_svg: ^0.17.2
 
   cupertino_icons: ^0.1.2
 
@@ -26,3 +27,12 @@ flutter:
     - imagens/heart.png
     - imagens/followers.png
     - imagens/camera.png
+    - imagens/academia.svg
+    - imagens/exercite.svg
+    - imagens/peso.svg
+    - imagens/peso8.svg
+    - imagens/core.svg
+    - imagens/calendario.svg
+    - imagens/juntos.svg
+    - imagens/run.svg
+
