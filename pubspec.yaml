@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   carousel_slider: ^1.4.1
   flutter_svg: ^0.17.2
+  http: ^0.12.0+4
+  webview_flutter: ^0.3.19+8
 
   cupertino_icons: ^0.1.2
 
@@ -35,4 +37,3 @@ flutter:
     - imagens/calendario.svg
     - imagens/juntos.svg
     - imagens/run.svg
-
