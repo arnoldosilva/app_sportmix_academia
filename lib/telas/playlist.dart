@@ -11,15 +11,6 @@ String response_type = 'code';
 String redirect_uri = 'workoutpro-login%3A%2F%2Fcallback';
 String scope = 'playlist-read-private';
 String phoneFeatureEnabled = 'true';
-<<<<<<< HEAD
-String remove;
-
-String url = baseurl + 
-    '?client_id=' + client_id + 
-    '&response_type=' + response_type + 
-    '&redirect_uri=' + redirect_uri + 
-    '&scope=' + scope;
-=======
 
 String key;
 String remove;
@@ -35,7 +26,6 @@ String url = baseurl +
     scope +
     '&phoneFeatureEnabled=' +
     phoneFeatureEnabled;
->>>>>>> d455606515b81653ca33fd2eec4cae58e8c3db75
 
 class PlayList extends StatefulWidget {
   @override
@@ -74,15 +64,9 @@ class _PlayListState extends State<PlayList> {
           initialUrl: url,
           onPageFinished: (data) async{
             await print(data);
-<<<<<<< HEAD
-            var key = data.substring(34, data.length);
-            print(key);
-            await curlConvert();
-=======
             
             var key = data.substring(34, data.length);
             print(key);
->>>>>>> d455606515b81653ca33fd2eec4cae58e8c3db75
             
             
           },
